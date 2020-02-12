@@ -59,8 +59,9 @@ class AlbumsController extends Controller
            }
 
            Album::create($input);
+           $albums = Album::all();
 
-        return view('album.index');
+        return view('album.index',compact('albums'));
     }
 
     /**
@@ -100,8 +101,24 @@ class AlbumsController extends Controller
      */
     public function update(AlbumsRequest $request, $id)
     {
-        echo "It comes here";
-        exit();
+            $album = Album::findOrFail($id);
+            $input = $request->all();
+
+             if($file = $request->file('photo_id')){
+
+                $name = time() . $file->getClientOriginalName();
+
+                $file->move('images', $name);
+
+                $photo = Photo::create(['file'=>$name]);
+
+                $input['photo_id'] = $photo->id;
+            }
+
+            $album->update($input);
+
+            return redirect('/albums');
+
     }
 
     /**
@@ -112,6 +129,8 @@ class AlbumsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Album::findOrFail($id)->delete();
+
+        return redirect('/albums');
     }
 }

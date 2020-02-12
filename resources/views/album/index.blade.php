@@ -26,6 +26,7 @@
                         <th scope="col">Artist</th>
                         <th scope="col">Genre</th>
                         <th scope="col">Release date</th>
+                        <th scope="col">Updated at</th>
                         @guest
                             <th scope="col"></th>
                         @endguest
@@ -41,11 +42,12 @@
                     @foreach($albums as $album)
                             <tr>
                                 <th scope="row">{{$album->id}}</th>
-                                <td><img height="50" src="{{App\Photo::getImageFullPath($album->photo->file)}}" alt="album cover"></td>
+                                <td><img height="50" src="{{$album->photo ? App\Photo::getImageFullPath($album->photo->file) : '/images/No_image_available.svg'}}" alt="album cover"></td>
                                 <td>{{ $album->album_name }}</td>
                                 <td>{{ $album->artist_name }}</td>
                                 <td>{{ $album->genre->name }}</td>
                                 <td>{{ $album->release_date }}</td>
+                                <td>{{ $album->updated_at->diffForHumans() }}</td>
                                 @guest
                                     <td>
                                         <a href="{{ url('/album/show/').'/'.$album->id}}"><i class="fas fa-eye"></i></a>
@@ -56,7 +58,11 @@
                                         <td>
                                             <a href="{{ url('/album/show/').'/'.$album->id}}"><i class="fas fa-eye"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="{{ url('/album/edit/').'/'.$album->id}}"><i class="fas fa-pencil-alt"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                                            <a href="{{ url('/album/destroy/').'/'.$album->id}}"  onclick="event.preventDefault();if(confirm('Are you sure you want to delete this album ?')){document.getElementById('delete_album_{{$album->id}}').submit()}"><i class="far fa-trash-alt"></i></a>
+                                            {!! Form::open(['method'=>'post','id' => 'delete_album_'.$album->id, 'action'=> ['AlbumsController@destroy',$album->id]]) !!}
+
+                                            {!! Form::close() !!}
+
                                         </td>
                                     @endif
                                 @endauth
@@ -70,3 +76,4 @@
         </div>
     </div>
 @endsection
+

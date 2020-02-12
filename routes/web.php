@@ -21,11 +21,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/album/create', 'AlbumsController@create')->name('albums.create')->middleware('auth');
 
-Route::post('/album/store', 'AlbumsController@store')->name('albums.store');
+Route::post('/album/store', 'AlbumsController@store')->name('album.store')->middleware('auth');
 
-Route::patch('/album/update/{$id}', 'AlbumsController@update')->name('albums.update');
+Route::patch('/album/update/{id}', 'AlbumsController@update')->name('album.update')->middleware('auth');
 
-Route::get('album/edit/{id}','AlbumsController@edit')->name('album.edit');
+Route::get('album/edit/{id}','AlbumsController@edit')->name('album.edit')->middleware('auth');
+
+Route::post('album/destroy/{id}','AlbumsController@destroy')->name('album.destroy')->middleware('auth');
 
 Route::get('album/show/{id}','AlbumsController@show')->name('album.show');
 

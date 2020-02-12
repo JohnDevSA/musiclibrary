@@ -9,6 +9,7 @@
         <div class="row "><!-- justify-content-center -->
             <div class="col-md-12">
                 {!! Form::model($album,['method'=>'PATCH', 'action'=> ['AlbumsController@update',$album->id], 'files'=>true]) !!}
+
                 <div class="form-group">
                     {!! Form::label('photo_id', 'Album cover:') !!}
                     {!! Form::file('photo_id', null,['class'=>'form-control'])!!}
