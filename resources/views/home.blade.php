@@ -13,8 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                        <div class='title m-b-md'>
+                            <a href="{{ url('/albums') }}" ><i class="fas fa-record-vinyl fa-6x"></i></a>
+{{--                            <a href="{{ url('/albums') }}"><i class="fas fa-users fa-5x"></i></a>--}}
+                        </div>
+                        <div class='title m-b-md'>
+{{--                            <a href="{{ url('/albums') }}" ><i class="fas fa-record-vinyl fa-6x"></i></a>--}}
+                            <a href="{{ url('/albums') }}"><i class="fas fa-users fa-5x"></i></a>
+                        </div>
                 </div>
             </div>
         </div>

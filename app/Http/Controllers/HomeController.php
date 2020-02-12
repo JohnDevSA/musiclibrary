@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use const http\Client\Curl\AUTH_ANY;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        /* On this method I check if the user is Admin and redirect to home else redirect to albums
+         *
+         */
+        if(strtolower(Auth::user()->role->name) === 'admin')
+        {
+            return view('home');
+        }
+
+        return view('album.index');
+
     }
 }

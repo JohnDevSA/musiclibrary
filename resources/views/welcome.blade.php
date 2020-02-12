@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>MusicLibrary</title>
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -68,12 +72,18 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ url('/albums') }}"><i class="fas fa-record-vinyl fa-2x"></i></a>
+                        <a href="{{ url('/profile') }}"><i class="fas fa-user fa-2x"></i></a>
+                        <a href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-power-off fa-2x"></i></a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
 
+                    @else
+                        <a href="{{ url('/albums') }}"><i class="fas fa-record-vinyl fa-2x"></i></a>
+                        <a href="{{ route('login') }}"><i class="fas fa-user fa-2x"></i></a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}"><i class="fas fa-sign-in-alt fa-2x"></i></a>
                         @endif
                     @endauth
                 </div>
@@ -81,17 +91,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Welcome to {{ config('app.name', 'Laravel') }}
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://www.offerzen.com/candidate/nkidi-nkogatse">Offerzen</a>
+                    <a href="https://github.com/JohnDevSA/musiclibrary">GitHub repo</a>
                 </div>
             </div>
         </div>
