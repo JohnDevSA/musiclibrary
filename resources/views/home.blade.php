@@ -18,7 +18,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="{{ url('/albums') }}" ><i class="fas fa-record-vinyl fa-6x"></i></a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="{{ url('/albums') }}"><i class="fas fa-users fa-5x"></i></a>
+                            <a href="#"><i class="fas fa-users fa-5x"></i></a>
                         </div>
 {{--                        <div class='col-md-6'>--}}
 {{--                            <a href="{{ url('/albums') }}" ><i class="fas fa-record-vinyl fa-6x"></i></a>--}}

@@ -17,17 +17,8 @@
       <change afterPath="$PROJECT_DIR$/../workflow_app/.idea/workflow_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../andiceconstruction/resources/views/layouts/backup_app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../andiceconstruction/resources/views/layouts/backup_app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../blog/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Album.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Album.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlbumsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlbumsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Review.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_09_212010_create_reviews_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/album/albumdetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/album/albumdetail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../workflow/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../workflow/.idea/dataSources.xml" afterDir="false" />
     </list>
@@ -171,7 +162,7 @@
       <workItem from="1581349853159" duration="1371000" />
       <workItem from="1581362624078" duration="8347000" />
       <workItem from="1581395798594" duration="5179000" />
-      <workItem from="1581407739467" duration="78724000" />
+      <workItem from="1581407739467" duration="79339000" />
     </task>
     <servers />
   </component>

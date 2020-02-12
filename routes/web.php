@@ -34,7 +34,7 @@ Route::get('album/show/{id}','AlbumsController@show')->name('album.show');
 
 Route::get('/albums', 'AlbumsController@index')->name('albums.index');
 
-Route::post('album/review','AlbumsReviewController@store')->name('album.review');
+Route::post('album/review','AlbumsReviewController@store')->name('album.review')->middleware('auth');
 
 Route::get('profile/{id}','UsersProfileController@edit')->name('user.profile_edit')->middleware('auth');
 
