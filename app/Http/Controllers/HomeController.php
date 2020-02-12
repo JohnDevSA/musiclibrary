@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use const http\Client\Curl\AUTH_ANY;
@@ -33,7 +34,9 @@ class HomeController extends Controller
             return view('home');
         }
 
-        return view('album.index');
+        $albums = Album::all();
+
+        return view('album.index',compact('albums'));
 
     }
 }
