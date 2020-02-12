@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/album/create', 'AlbumsController@create')->name('albums.create')->middleware('auth');
 
 Route::post('/album/store', 'AlbumsController@store')->name('album.store')->middleware('auth');
@@ -32,6 +33,12 @@ Route::post('album/destroy/{id}','AlbumsController@destroy')->name('album.destro
 Route::get('album/show/{id}','AlbumsController@show')->name('album.show');
 
 Route::get('/albums', 'AlbumsController@index')->name('albums.index');
+
+Route::post('album/review','AlbumsReviewController@store')->name('album.review');
+
+Route::get('profile/{id}','UsersProfileController@edit')->name('user.profile_edit')->middleware('auth');
+
+Route::patch('profile/{id}','UsersProfileController@update')->name('user.profile_update')->middleware('auth');
 
 
 

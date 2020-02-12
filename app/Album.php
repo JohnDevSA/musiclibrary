@@ -11,7 +11,7 @@ class Album extends Model
 
     public function reviews()
     {
-        return $this->hasMany('App\Reviews');
+        return $this->hasMany('App\AlbumReview');
     }
 
     public  function genre()

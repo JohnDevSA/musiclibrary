@@ -73,7 +73,7 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/albums') }}"><i class="fas fa-record-vinyl fa-2x"></i></a>
-                        <a href="{{ url('/profile') }}"><i class="fas fa-user fa-2x"></i></a>
+                        <a href="{{ url('/profile/').'/'.Auth::user()->id }}"><i class="fas fa-user fa-2x"></i></a>
                         <a href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-power-off fa-2x"></i></a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

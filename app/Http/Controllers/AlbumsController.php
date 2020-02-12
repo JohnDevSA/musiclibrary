@@ -73,8 +73,9 @@ class AlbumsController extends Controller
     public function show($id)
     {
         $album = Album::findOrFail($id);
+        $reviews = $album->reviews;
 
-        return view('album.albumdetail',compact('album'));
+        return view('album.albumdetail',compact('album','reviews'));
     }
 
     /**

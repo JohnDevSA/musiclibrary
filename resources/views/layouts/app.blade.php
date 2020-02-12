@@ -61,6 +61,15 @@
                                     @endif
 {{--                            </div>--}}
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/home') }}"><i class="fas fa-home fa-2x"></i></a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/albums') }}"><i class="fas fa-record-vinyl fa-2x"></i></a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/profile/').'/'.Auth::user()->id }}"><i class="fas fa-user fa-2x"></i></a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

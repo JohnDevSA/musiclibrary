@@ -13,14 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <div class='title m-b-md'>
+                        <div class='col-md-12'>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="{{ url('/albums') }}" ><i class="fas fa-record-vinyl fa-6x"></i></a>
-{{--                            <a href="{{ url('/albums') }}"><i class="fas fa-users fa-5x"></i></a>--}}
-                        </div>
-                        <div class='title m-b-md'>
-{{--                            <a href="{{ url('/albums') }}" ><i class="fas fa-record-vinyl fa-6x"></i></a>--}}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="{{ url('/albums') }}"><i class="fas fa-users fa-5x"></i></a>
                         </div>
+{{--                        <div class='col-md-6'>--}}
+{{--                            <a href="{{ url('/albums') }}" ><i class="fas fa-record-vinyl fa-6x"></i></a>--}}
+{{--                            <a href="{{ url('/albums') }}"><i class="fas fa-users fa-5x"></i></a>--}}
+{{--                        </div>--}}
                 </div>
             </div>
         </div>
